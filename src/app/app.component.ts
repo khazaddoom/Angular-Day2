@@ -7,17 +7,27 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  variable: boolean = true;
-  valueObj: string = 'limegreen';
+  showhide: boolean = false;
+  logs: string[] = [];
 
-
-  constructor() {
-    setTimeout(() => {
-
-      this.variable = false;
-      
-    }, 2000);
+  onshowhide() {
+    this.showhide = this.showhide? false : true;
+    this.logs.push((new Date()).toTimeString());
   }
+
+
+
+  // variable: boolean = true;
+  // valueObj: string = 'limegreen';
+
+
+  // constructor() {
+  //   setTimeout(() => {
+
+  //     this.variable = false;
+      
+  //   }, 2000);
+  // }
 
   // username: string = '';
   // isDisabled: boolean = true;

@@ -1,9 +1,6 @@
-<p *ngIf="variable; else elseBlock" [ngClass] = "{ online : variable === true}">
-  Wait!!! Something is being calculated...
-</p>
+<button (click) = "onshowhide()">Display Details</button>
+<p *ngIf = "showhide">Secret password = 'tuna'</p>
 
-<ng-template #elseBlock>
-  <p [ngStyle] = "{ backgroundColor: '#000000', color: '#FFFFFF' }">
-    Here is your content.
-  </p>
-</ng-template>
+<div *ngFor = "let logline of logs; let i = index"> 
+  <div [ngStyle] = "{ backgroundColor : i >= 5? 'blue' : 'orange'}">{{ logline }}</div>
+</div>
