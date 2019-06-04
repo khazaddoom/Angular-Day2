@@ -1,2 +1,9 @@
-<div *ngIf="variable; else elseBlock">Wait! i am loading something in a moment...</div>
-<ng-template #elseBlock>Someone loaded me!!!</ng-template>
+<p *ngIf="variable; else elseBlock">
+  Wait!!! Something is being calculated...
+</p>
+
+<ng-template #elseBlock>
+  <p>
+    Here is your content.
+  </p>
+</ng-template>
