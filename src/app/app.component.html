@@ -1,4 +1,4 @@
-<p *ngIf="variable; else elseBlock">
+<p *ngIf="variable; else elseBlock" [ngClass] = "{ online : variable === true}">
   Wait!!! Something is being calculated...
 </p>
 
