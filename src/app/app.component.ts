@@ -7,21 +7,32 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  username: string = '';
-  isDisabled: boolean = true;
+  variable: boolean = false;
 
-  resetusername() {
-    this.username = '';
-  }
 
-  isdisabled() {
-    if (this.username != null) {
-      return false;
+  constructor() {
+    setTimeout(() => {
+
+      this.variable = true;
       
-    } else {
-      return true;
-    }
+    }, 2000);
   }
+
+  // username: string = '';
+  // isDisabled: boolean = true;
+
+  // resetusername() {
+  //   this.username = '';
+  // }
+
+  // isdisabled() {
+  //   if (this.username != null) {
+  //     return false;
+      
+  //   } else {
+  //     return true;
+  //   }
+  // }
 
   // title: string = 'This is a warning!';
   // hideshow: boolean = true;
