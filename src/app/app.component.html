@@ -1,6 +1,6 @@
 <div class="container">
 
-  <warning></warning>
-
+  <button [disabled] = "hideshow" (click)="onbuttonclick()">Positive</button>
+  <button [disabled] = "!hideshow" (click)="onbuttonclick()">Negative</button>
 
 </div>
