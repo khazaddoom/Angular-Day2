@@ -3,7 +3,7 @@
 </p>
 
 <ng-template #elseBlock>
-  <p>
+  <p [ngStyle] = "{ 'background-color': valueObj, 'max-width': '500px' }">
     Here is your content.
   </p>
 </ng-template>

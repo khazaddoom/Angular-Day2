@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   variable: boolean = true;
+  valueObj: string = 'limegreen';
 
 
   constructor() {
