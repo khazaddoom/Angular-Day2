@@ -6,31 +6,48 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'This is a warning!';
-  hideshow: boolean = true;
-  somevalue: string = '';
 
-  constructor () {
-    setTimeout(() => {
+  username: string = '';
+  isDisabled: boolean = true;
 
-      this.hideshow = false;
-      console.log('loaded!')
-
-    }, 2000);
+  resetusername() {
+    this.username = '';
   }
 
-  onbuttonclick() {
-    if (this.hideshow) {
-      this.hideshow = false;
+  isdisabled() {
+    if (this.username != null) {
+      return false;
+      
     } else {
-      this.hideshow = true;
+      return true;
     }
   }
 
-  oninput(event: Event) {
+  // title: string = 'This is a warning!';
+  // hideshow: boolean = true;
+  // somevalue: string = 'Type something here...';
 
-    this.somevalue = (<HTMLInputElement>event.target).value;
+  // constructor () {
+  //   setTimeout(() => {
 
-  }
+  //     this.hideshow = false;
+  //     console.log('loaded!')
+
+  //   }, 2000);
+  // }
+
+  // onbuttonclick() {
+  //   if (this.hideshow) {
+  //     this.hideshow = false;
+  //   } else {
+  //     this.hideshow = true;
+  //   }
+  // }
+
+  // oninput(event: Event) {
+
+  //   this.somevalue = (<HTMLInputElement>event.target).value;
+
+  // }
 
 }

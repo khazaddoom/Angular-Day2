@@ -1,7 +1,5 @@
-<div class="container">
+<input type="text" [(ngModel)] = "username">
 
-<input type="text" [(ngModel)] = "somevalue" >
+<p>{{ username }}</p>
 
-{{ somevalue }}
-
-</div>
+<button (click) = "resetusername()" [disabled] = "username === ''">Reset</button>
