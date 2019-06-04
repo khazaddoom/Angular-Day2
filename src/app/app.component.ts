@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = 'This is a warning!';
   hideshow: boolean = true;
+  somevalue: string = '';
 
   constructor () {
     setTimeout(() => {
@@ -25,4 +26,11 @@ export class AppComponent {
       this.hideshow = true;
     }
   }
+
+  oninput(event: Event) {
+
+    this.somevalue = (<HTMLInputElement>event.target).value;
+
+  }
+
 }
