@@ -1,2 +1,2 @@
-<p *ngIf="!variable">Loading...</p>
-<p *ngIf="variable">learning standard directives.</p>
+<div *ngIf="variable; else elseBlock">Wait! i am loading something in a moment...</div>
+<ng-template #elseBlock>Someone loaded me!!!</ng-template>

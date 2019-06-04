@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  variable: boolean = false;
+  variable: boolean = true;
 
 
   constructor() {
     setTimeout(() => {
 
-      this.variable = true;
+      this.variable = false;
       
     }, 2000);
   }
